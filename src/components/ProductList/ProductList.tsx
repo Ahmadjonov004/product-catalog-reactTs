@@ -15,8 +15,8 @@ interface ProductsProps{
 function ProductList( {products, onDelete} : ProductsProps) {
   
   return (
+ 
     <div className="productList">
-      {/* <h1>Mahsulotlar ro'yhati</h1> */}
     {
       products.length > 0
         ? products.map(product => (

@@ -33,7 +33,8 @@ function App() {
   const filterProduct = filteredProducts === "All" ?  products : products.filter(product => product.category === filteredProducts)
 
   return (
-    <div>
+    <div className='general'>
+      <div className='header'>
       <input 
       placeholder='Nomini kiriting...'
       name='title'
@@ -65,9 +66,13 @@ function App() {
         <option value="Tablet">Tablet</option>
         <option value="Accessories">Accessories</option>
       </select>
-
-      <ProductList products = {filterProduct} onDelete = {onDelete}/>
+      </div>
+      <h1>Mahsulotlar katalogi</h1>
+        
+          <ProductList products = {filterProduct} onDelete = {onDelete}/>
+       
     </div>
+    
   )
 }
 
