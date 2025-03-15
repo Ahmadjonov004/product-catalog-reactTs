@@ -6,17 +6,4 @@ export const products = [
   { id: 5, name: "Dell XPS 13", price: 1500, category: "Laptop" },
   { id: 6, name: "Sony WH-1000XM5", price: 400, category: "Accessories" },
   { id: 7, name: "Apple Watch Series 8", price: 500, category: "Accessories" },
-  { id: 8, name: "Asus ROG Zephyrus G14", price: 1800, category: "Laptop" },
-  { id: 9, name: "Google Pixel 7", price: 900, category: "Phone" },
-  { id: 10, name: "Lenovo Tab P12 Pro", price: 800, category: "Tablet" },
-  { id: 11, name: "HP Spectre x360", price: 1600, category: "Laptop" },
-  { id: 12, name: "OnePlus 11", price: 850, category: "Phone" },
-  { id: 13, name: "Bose QuietComfort 45", price: 350, category: "Accessories" },
-  { id: 14, name: "Samsung Galaxy Tab S8", price: 750, category: "Tablet" },
-  { id: 15, name: "Microsoft Surface Laptop 5", price: 1700, category: "Laptop" },
-  { id: 16, name: "Xiaomi 13 Pro", price: 950, category: "Phone" },
-  { id: 17, name: "Logitech MX Master 3S", price: 100, category: "Accessories" },
-  { id: 18, name: "Amazon Kindle Paperwhite", price: 150, category: "Accessories" },
-  { id: 19, name: "Razer Blade 15", price: 2200, category: "Laptop" },
-  { id: 20, name: "Nothing Phone (1)", price: 600, category: "Phone" }
 ];

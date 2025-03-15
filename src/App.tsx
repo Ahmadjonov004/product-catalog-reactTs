@@ -16,10 +16,6 @@ function App() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setNewProduct({...newProduct, [name]: value })
-    //     const { name, price, category } = newProduct
-    // const newProduct = { id: products.length + 1, name, price, category }
-    // setProduct([...products, newProduct])
-    // setNewProduct({ name: '', price: 0, category: '' })
 
   }  
 
