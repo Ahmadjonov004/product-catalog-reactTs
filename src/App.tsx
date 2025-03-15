@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import { products as productData  } from '../public/data/data.ts'
+import { products as productData  } from './data/data.ts';
 import ProductList from './components/ProductList/ProductList.tsx'
 import "./App.css"
 import "./index.css"
 
 function App() {
   const [products, setProduct] = useState(productData)
-  const [newProduct, setNewProduct] = useState({ title: '', price: '', category: '' })
+  const [newProduct, setNewProduct] = useState({ name: '', price: 0, category: '' })
   const [filteredProducts, setFilteredProducts] =useState('All')
 
   const onDelete = (id: number) => {
@@ -16,20 +16,19 @@ function App() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setNewProduct({...newProduct, [name]: value })
-    // const { title, price, category } = newProduct
-    // const newProduct = { id: products.length + 1, title, price, category }
-    // setPrtoduct([...products, newProduct])
-    // setNewProduct({ title: '', price: 0, category: '' })
+    //     const { name, price, category } = newProduct
+    // const newProduct = { id: products.length + 1, name, price, category }
+    // setProduct([...products, newProduct])
+    // setNewProduct({ name: '', price: 0, category: '' })
+
   }  
 
   const addProduct = () => {
     const newId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
     setProduct([...products, { id: newId, ...newProduct }]);
-    setNewProduct({ title: '', price: '', category: '' }); 
-}
+    setNewProduct({ name: '', price: 0, category: '' });
 
-
-
+  };
   const filterProduct = filteredProducts === "All" ?  products : products.filter(product => product.category === filteredProducts)
 
   return (
@@ -37,8 +36,8 @@ function App() {
       <div className='header'>
       <input 
       placeholder='Nomini kiriting...'
-      name='title'
-      value={newProduct.title}
+      name='name'
+      value={newProduct.name}
       onChange={handleChange}
       type="text" 
       />
@@ -61,7 +60,7 @@ function App() {
       <select value={filteredProducts} 
       onChange={(e) => setFilteredProducts(e.target.value) }>
         <option value="All">All</option>
-        <option value="Laptop">Phone</option>
+        <option value="Laptop">Laptop</option>
         <option value="Phone">Phone</option>
         <option value="Tablet">Tablet</option>
         <option value="Accessories">Accessories</option>
@@ -76,4 +75,5 @@ function App() {
   )
 }
 
-export default App
+
+export default App 
