@@ -18,3 +18,20 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+@media only screen and (max-width:480px) {
+  .general, .header {
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem !important;
+  }
+  
+  h1{
+    font-size: 2em;
+  }
+  
+}

@@ -66,7 +66,7 @@ function App() {
         <option value="Accessories">Accessories</option>
       </select>
       </div>
-      <h1>Mahsulotlar katalogi</h1>
+      <h1 className='title'>Mahsulotlar katalogi</h1>
         
           <ProductList products = {filterProduct} onDelete = {onDelete}/>
        
